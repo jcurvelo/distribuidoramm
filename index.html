@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/Logo-empresa-png.ico" type="image/x-icon">
+    <title>Distribuidora Doble MM</title>
+    <link rel="stylesheet" href="./libraries/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="./fontawesome-free-5.15.1-web/css/all.min.css"
+    />
+    <script src="./fontawesome-free-5.15.1-web/js/all.min.js"></script>
+    <script src="./libraries/bootstrap.min.js" defer></script>
+    <script src="./libraries/vue.js" defer></script>
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <nav id="navigation-bar">
+      <div id="topbar" class="topbar d-flex">
+        <a href="#home"><i class="fas fa-home"></i> Inicio</a>
+        <a href="#products"><i class="fas fa-shopping-basket"></i> Productos</a>
+        <a href="#about"><i class="fas fa-store"></i> Sobre Nosotros</a>
+        <a href="#contact"><i class="fas fa-mail-bulk"></i> Contáctanos</a>
+        <div class="spans d-flex flex-column align-self-end">
+          <span class="info"
+          ><i class="fas fa-phone"></i> +58 (0414) 253-81-95</span
+        >
+        <span class="info"><i class="fas fa-envelope"></i> distribuidoramm@gmail.com</span>
+
+        </div>
+      </div>
+      <ul id="nav_ul" class="d-none justify-content-around flex-column">
+        <li>
+          <a id="goToHome" class="sectionIcon" href="#home">
+            <i class="fas fa-home"></i>
+            <span class="tag">Inicio</span>
+          </a>
+        </li>
+        <li>
+          <a id="goToProducts" class="sectionIcon" href="#products">
+            <i class="fas fa-shopping-basket"></i>
+            <span class="tag">Productos</span>
+          </a>
+        </li>
+        <li>
+          <a class="sectionIcon" href="#about">
+            <i class="fas fa-store"></i>
+            <span class="tag">Sobre Nosotros</span>
+          </a>
+        </li>
+        <li>
+          <a class="sectionIcon" href="#contact">
+            <i class="fas fa-mail-bulk"></i>
+            <span class="tag">Contáctanos</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <div id="home" class="content-area">
+      <div class="slash"></div>
+      <div class="slash"></div>
+      <div class="bg-image"></div>
+      <div
+        id="first-section"
+        class="container d-flex align-items-center justify-content-around"
+      >
+        <div class="slogan">
+          <h2>TU MEJOR OPCIÓN</h2>
+          <br />
+          <span class="slogan-subphrase"
+            >CON LOS MEJORES <span>PRECIOS</span></span
+          >
+        </div>
+        <div class="logo"></div>
+      </div>
+    </div>
+    <div id="products" class="content-area">
+      <div class="container">
+        <div class="frase">
+          <h3>Productos en oferta</h3>
+        </div>
+        <div
+          id="display-products"
+          class="d-flex justify-content-around flex-wrap"
+        >
+          <div
+            v-for="product in products"
+            class="product d-flex align-items-end"
+            :style="product.img"
+            v-on:click="buy(product.nombre)"
+          >
+            <div class="product-info text-center">
+              <h3>{{ product.nombre }}</h3>
+              <span>Bs.{{ product.precio }} - {{ product.unidad }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="about" class="content-area">
+      <div class="container p-4">
+        <div class="about-us">
+          <div class="row">
+            <div class="col-6">
+              <div id="about_img_1"></div>
+            </div>
+            <div class="col-6 d-flex justify-content-center flex-column">
+              <h3>Sobre Nosotros</h3><br><br>
+              <p>
+                Una Negocio familiar nacido entre una comunidad que nos vio crecer. Esta empresa ha conseguido desde su fundación, convertirse en un punto referente en la localidad de Ruiz Pineda, donde nuestros cliente tienen la seguridad de que pueden contar con nosotros para ofrecer calidad a buen precio
+              </p>
+            </div>
+          </div>
+          <br><br>
+          <div class="row">
+            <div class="col-6 d-flex justify-content-center flex-column">
+              <h3>Nuestros Valores</h3><br><br>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Consequuntur omnis labore in quos velit error culpa fugiat tempore
+                ad, porro quasi sunt vero eius. Quos placeat incidunt aperiam
+                corporis officiis. <br><br>
+
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                Consequuntur omnis labore in quos velit error culpa fugiat tempore
+                ad, porro quasi sunt vero eius. Quos placeat incidunt aperiam
+                corporis officiis.
+              </p>
+            </div>
+            <div class="col-6">
+              <div id="about_img_2"></div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="content-area d-flex align-items-center">
+      <div class="bg-contact"></div>
+      <div class="container">
+        <h2>Contáctanos</h2>
+        <br /><br />
+        <div class="row">
+          <div class="col-6">
+            <form action="#">
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  name="nombre"
+                  id="nombre"
+                  placeholder="Nombre y Apellido"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="email">Correo Electrónico</label>
+                <input
+                  class="form-control"
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="ejemplo@email.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="producto_de_interes">Producto de interés</label>
+                <select
+                  class="custom-select"
+                  name="producto_de_interes"
+                  id="producto_de_interes"
+                >
+                  <option value="ninguno">Ninguno</option>
+                  <option v-for="product in products" :value="product.nombre">
+                    {{ product.nombre }}
+                  </option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="desc">Descripción</label>
+                <textarea
+                  class="form-control"
+                  name="desc"
+                  id="desc"
+                  cols="30"
+                  rows="10"
+                  placeholder="Describa su mensaje"
+                ></textarea>
+              </div>
+              <input class="btn" type="button" value="Enviar" />
+            </form>
+          </div>
+          <div class="col-6 text-center">
+            <h4>Ubicación</h4>
+            <div id="mapa"></div>
+            <span
+              >Av. Principal de Ruiz Pineda, zona 1, casa número D-6, Guarenas,
+              Estado Miranda</span
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="text-center d-flex flex-column">
+      <span>Distribuidora Doble MM, 9950 C.A.</span>
+      <span><i class="fas fa-phone"></i> +58 (0414) 253-81-95</span>
+      <span
+        >Av. Principal de Ruiz Pineda, zona 1, casa número D-6, Guarenas, Estado
+        Miranda</span
+      >
+      <br /><br />
+      <span
+        ><a href="#">Terminos y Condiciones</a> |
+        <a href="#">Aviso Legal</a></span
+      >
+    </footer>
+  </body>
+</html>
