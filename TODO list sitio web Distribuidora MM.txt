@@ -1,0 +1,19 @@
+PARA EL SITIO WEB DEL PROYECTO
+
+-Separar las secciones en páginas distintas
+
+-Crear función de carrito de compra
+
+-Crear en la página de la tienda un filtro para separar las categorías (Cerdo, Pollo, Res, Víveres y varios)
+
+-Crear la opción de comprar y que salgan los productos que seleccionaste, la cantidad, precio sub-total, posibilidad de quitar un producto y botón de confirmar pedido
+
+-Crear lógin para admin
+
+-Crear Panel admin con las secciones de Dashboard y Productos
+
+-Crear Base de datos para los productos
+
+-Crear en Dashboard de admin un input con el dólar trabajado por la empresa, que influye en el resto de productos
+
+-Crear en Admin/Productos un formulario para ingresar nuevos productos y ver los ya existentes
