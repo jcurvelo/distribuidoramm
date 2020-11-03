@@ -11,9 +11,24 @@
     <?php
     require('../navbar.php');
     ?>
+
     <div class="container">
-        <h1>Tienda</h1>
+        <div class="frase">
+            <h3>Productos en oferta</h3>
+        </div>
+        <div id="display-products" class="d-flex justify-content-around flex-wrap">
+            <div v-for="product in products" class="product d-flex align-items-end" @click="addItem" :style="{ backgroundImage: 'url('+product.product_img+')' }">
+                <div class="product-info text-center">
+                    <h3>{{ product.product_name }}</h3>
+                    <span>Bs.{{ product.product_price }} - {{ product.product_unit }}</span>
+                </div>
+            </div>
+        </div>
     </div>
+
 </body>
+<?php
+require('../footer.php');
+?>
 
 </html>

@@ -4,15 +4,15 @@
         <a href="store.php"><i class="fas fa-shopping-basket"></i> Productos</a>
         <a href="about.php"><i class="fas fa-store"></i> Sobre Nosotros</a>
         <a href="contact.php"><i class="fas fa-mail-bulk"></i> Contáctanos</a>
-        <div class="spans d-flex flex-column align-self-end">
-          <span class="info"
-          ><i class="fas fa-phone"></i> +58 (0414) 253-81-95</span
-        >
-        <span class="info"><i class="fas fa-envelope"></i> distribuidoramm@gmail.com</span>
+        <div id="shoppingbar" class="spans d-flex flex-column align-self-end">
+          <button class="btn btn-warning">
+            <i class="fas fa-shopping-cart"></i>
+            {{ items }}
+          </button>
 
         </div>
       </div>
-      <ul id="nav_ul" class="d-none justify-content-around flex-column">
+      <!-- <ul id="nav_ul" class="d-none justify-content-around flex-column">
         <li>
           <a id="goToHome" class="sectionIcon" href="index.php">
             <i class="fas fa-home"></i>
@@ -37,5 +37,5 @@
             <span class="tag">Contáctanos</span>
           </a>
         </li>
-      </ul>
+      </ul> -->
     </nav>
