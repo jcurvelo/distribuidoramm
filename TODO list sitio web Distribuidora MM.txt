@@ -1,6 +1,6 @@
 PARA EL SITIO WEB DEL PROYECTO
 
--Separar las secciones en páginas distintas
+-Separar las secciones en páginas distintas*
 
 -Crear función de carrito de compra
 
@@ -8,11 +8,11 @@ PARA EL SITIO WEB DEL PROYECTO
 
 -Crear la opción de comprar y que salgan los productos que seleccionaste, la cantidad, precio sub-total, posibilidad de quitar un producto y botón de confirmar pedido
 
--Crear lógin para admin
+-Crear lógin para admin*
 
--Crear Panel admin con las secciones de Dashboard y Productos
+-Crear Panel admin con las secciones de Dashboard y Productos*
 
--Crear Base de datos para los productos
+-Crear Base de datos para los productos*
 
 -Crear en Dashboard de admin un input con el dólar trabajado por la empresa, que influye en el resto de productos
 

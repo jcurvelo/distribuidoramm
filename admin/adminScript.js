@@ -1,9 +1,9 @@
 fetch("../db_to_json.php")
   .then((response) => response.json())
   .then((data) => {
-    document.getElementById('loading').classList.replace('d-block','d-none');
-    document.getElementById('table').classList.remove('d-none');
-    document.getElementById('navTable').classList.remove('d-none');
+    // document.getElementById('loading').classList.replace('d-block','d-none');
+    // document.getElementById('table').classList.remove('d-none');
+    // document.getElementById('navTable').classList.remove('d-none');
     const autobus = new Vue();
     // console.log(data);
     const productTable = new Vue({
@@ -21,10 +21,12 @@ fetch("../db_to_json.php")
         })
       }
     });
+    
     let pages = [];
     for(let i=0;i<Math.ceil(data.length / 5);i++){
       pages.push(i+1);
     }
+    
     const navTable = new Vue({
       el: '#navTable',
       data:{
@@ -37,6 +39,14 @@ fetch("../db_to_json.php")
         }
       }
     });
+
+    const dashboard = new Vue({
+      el: "#dashboard",
+      data:{
+        totalPedidos: data.length
+      }
+    });
+
   });
 
 

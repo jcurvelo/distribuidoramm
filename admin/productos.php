@@ -3,7 +3,7 @@
 
 <head>
     <?php
-    require('./menuHead.php');
+    require('./adminHead.php');
     ?>
 </head>
 
@@ -13,8 +13,9 @@
         require('./menuAdmin.php');
         ?>
         <div class="container p5">
-            <span id="loading" class="d-block">Loading......</span>
-            <table id="table" class="table d-none">
+        <b>TODO</b><br>
+        Agregar un padding al listado
+            <table id="table" class="table">
                 <thead>
                     <th scope="col">ID</th>
                     <th scope="col">Nombre</th>
@@ -37,7 +38,7 @@
                 </tbody>
             </table>
             <nav aria-label="Page navigation example">
-                <ul id="navTable" class="pagination d-none">
+                <ul id="navTable" class="pagination">
                     <li class="page-item">
                         <span class="page-link" aria-label="Previous">
                             <span aria-hidden="true">&laquo;</span>
@@ -57,7 +58,6 @@
             </nav>
         </div>
     </div>
-    <script src="adminScript.js"></script>
 </body>
 
 </html>
