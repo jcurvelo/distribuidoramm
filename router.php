@@ -19,6 +19,10 @@ switch ($requests) {
     case $cpath . '/contact':
         header('Location:' . $cpath . '/public/contact.php');
         break;
+    case $cpath . '/db_to_json.php':
+        header('Location:' . $cpath . '/public/index.php');
+        break;
+        
     default:
         header('Location:' . $cpath . '/public/index.php');
         break;

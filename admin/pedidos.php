@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    
+    if(!$_SESSION['session_id']){
+        header('Location: ./index.php');
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +20,35 @@
         require('./menuAdmin.php');
         ?>
         <div class="container">
+            <h4>Por Gestionar</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Tipo de pago</th>
+                        <th>Delivery</th>
+                        <th>Total</th>
+                        <th>Dirección</th>
+                        <th>Productos</th>
+                    </tr>
+                </thead>
+            </table>
+            <br>
+            <h4>Por Confirmar</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nombre</th>
+                        <th>Tipo de pago</th>
+                        <th>Delivery</th>
+                        <th>Total</th>
+                        <th>Dirección</th>
+                        <th>Productos</th>
+                    </tr>
+                </thead>
+            </table>
             <h2>Lista de cosas por hacer aquí</h2>
             <ul>
                 <li>Crear lista de pedidos</li>

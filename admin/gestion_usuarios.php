@@ -1,3 +1,10 @@
+<?php
+session_start();
+
+if (!$_SESSION['session_id']) {
+    header('Location: ./index.php');
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,8 +28,15 @@
                 <li>Editar debe tener opción para ver o cambiar la contraseña</li>
                 <li>Esta opción solo puede ser vista por usuarios nivel 1</li>
             </ul>
+            <div id="test">
+                <buttoncounter></buttoncounter>
+
+            </div>
         </div>
     </div>
+    <script>
+
+    </script>
 </body>
 
 </html>

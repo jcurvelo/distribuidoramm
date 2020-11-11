@@ -4,5 +4,5 @@
     <a href="./productos.php" class="menuOption">Productos</a>
     <a href="./pedidos.php" class="menuOption">Pedidos</a>
     <a href="./gestion_usuarios.php" class="menuOption">Usuarios</a>
-    <a href="../public/index.php" class="menuOption">Salir</a>
+    <a href="./logout.php" class="menuOption">Salir</a>
 </div>
