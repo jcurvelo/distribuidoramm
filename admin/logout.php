@@ -5,4 +5,4 @@ unset($_SESSION['username']);
 unset($_SESSION['access_level']);
 session_unset();
 unset($_COOKIE['PHPSESSID']);
-// header('Location: ./index.php');
+header('Location: ./index.php');

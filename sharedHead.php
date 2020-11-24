@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="./fontawesome-free-5.15.1-web/css/all.min.css"
     />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="./libraries/jquery.min.js"></script>
     <script src="./fontawesome-free-5.15.1-web/js/all.min.js"></script>
     <script src="./libraries/js/bootstrap.min.js"></script>
     <script src="./script.js" defer></script>

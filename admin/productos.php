@@ -20,7 +20,6 @@ if (!$_SESSION['session_id']) {
         require('./menuAdmin.php');
         ?>
         <div class="container">
-            <button class="btn btn-success" data-toggle="formularioProductos">Agregar Nuevo Producto</button>
             <div class="formularioProductos">
                 <h2>Nuevo Producto</h2>
                 <form action="./productProcess.php" method="post">

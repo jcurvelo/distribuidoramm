@@ -19,12 +19,7 @@ function sortByProperty(property, isNumeric = false) {
 fetch("../db_to_json.php")
   .then((response) => response.json())
   .then((data) => {
-    // console.log(data);
-    // document.getElementById('loading').classList.replace('d-block','d-none');
-    // document.getElementById('table').classList.remove('d-none');
-    // document.getElementById('navTable').classList.remove('d-none');
     const autobus = new Vue();
-    // console.log(data);
     const productTable = new Vue({
       el: "#productTable",
       data: {
@@ -58,7 +53,6 @@ fetch("../db_to_json.php")
       },
       methods: {
         changePage: function (number) {
-          // console.log(this.pages);
           autobus.$emit("changePage", {
             startSlice: number * 5 - 5,
             endSlice: number * 5,
@@ -70,7 +64,8 @@ fetch("../db_to_json.php")
     const dashboard = new Vue({
       el: "#dashboard",
       data: {
-        totalPedidos: data.length,
+        totalProductos: data.length,
       },
     });
+
   });

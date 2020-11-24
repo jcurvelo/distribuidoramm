@@ -5,6 +5,8 @@
     <?php
     require('../sharedHead.php');
     ?>
+    <script src="./libraries/vue.js"></script>
+
 </head>
 
 <body>
@@ -12,7 +14,7 @@
     require('../navbar.php');
     ?>
     <div class="container">
-        <div class="content-area d-flex align-items-center">
+        <div class="contact content-area d-flex align-items-center">
             <div class="bg-contact"></div>
             <div class="container">
                 <h2>Contáctanos</h2>
@@ -27,6 +29,10 @@
                             <div class="form-group">
                                 <label for="email">Correo Electrónico</label>
                                 <input class="form-control" type="email" name="email" id="email" placeholder="ejemplo@email.com" required />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Asunto</label>
+                                <input class="form-control" type="email" name="email" id="email" placeholder="¿Sobre qué desea hablarnos?" required />
                             </div>
                             <div class="form-group">
                                 <label for="desc">Descripción</label>
@@ -45,6 +51,36 @@
             </div>
         </div>
     </div>
+    <?php
+    require('../footer.php');
+    ?>
+    <script>
+        new Vue({
+            el: "#shoppingbar",
+            data: {
+                cart: []
+            },
+            methods: {
+                pagar: function() {
+                    bus.$emit('mostrarPagar', this.cart);
+                }
+            },
+            created() {
+                bus.$on("agregarProducto", (data) => {
+                    this.cart.push(data);
+                });
+                bus.$on("eliminarProducto", (data) => {
+                    for (const x in this.cart) {
+                        if (this.cart.hasOwnProperty(x)) {
+                            if (this.cart[x].id == data.id) {
+                                this.cart.splice(x, 1);
+                            }
+                        }
+                    }
+                });
+            },
+        });
+    </script>
 </body>
 
 </html>

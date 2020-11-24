@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <?php
-        require('./adminHead.php');
+    require('./adminHead.php');
     ?>
 </head>
+
 <body>
-    <div id="login">
+    <div id="login" class="d-flex justify-content-center">
+        <img src="../public/img/Logo-empresa-png.png" alt="logo" width="300" height="300">
+
         <div class="container">
-        <h2 class="text-center">Sistema Administrador</h2>
+            <h2 class="text-center">Sistema Administrador</h2>
             <form action="./loginProcess.php" method="post">
                 <div class="form-group">
                     <label for="username">Nombre de usuario</label>
@@ -23,4 +27,5 @@
         </div>
     </div>
 </body>
+
 </html>

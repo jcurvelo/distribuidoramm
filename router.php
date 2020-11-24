@@ -23,7 +23,7 @@ switch ($requests) {
         header('Location:' . $cpath . '/public/index.php');
         break;
         
-    default:
-        header('Location:' . $cpath . '/public/index.php');
-        break;
+    // default:
+    //     header('Location:' . $cpath . '/public/index.php');
+    //     break;
 }
