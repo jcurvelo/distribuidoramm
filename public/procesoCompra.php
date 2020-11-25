@@ -1,4 +1,4 @@
-<?php require('../connection.php');?>
+<?php require('../connection.php'); ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,9 +13,10 @@
     <?php
     require('../navbar.php');
     ?>
-    <div class="container">
-        <h1 class="text-center">Su pedido está siendo procesado</h1>
-        <h3 class="text-center">Recibirá una notificación a su correo para confirmar</h3>
+    <div class="container" class="text-center">
+        <h1>Su pedido está siendo procesado</h1>
+        <h3>Recibirá una notificación a su correo para confirmar</h3>
+        <h5>Debe confirmar en un máximo de 24 horas o su pedido será cancelado</h5>
     </div>
     <script>
         new Vue({
@@ -53,26 +54,24 @@ $nombre_cliente = $_POST['nombre_cliente'];
 $tel_cliente = $_POST['tel_cliente'];
 $email_cliente = $_POST['email_cliente'];
 $delivery_type = $_POST['delivery_type'];
-$delivery_date = $_POST['delivery_date'];
-$direccion = $_POST['direccion'];
 $detalles = $_POST['detalles'];
 $metodo_pago = $_POST['metodo_pago'];
 $total_pagar = $_POST['total_pagar'];
 $lista_productos = $_POST['lista_productos'];
 
-if(!$_POST['delivery_date']){
-    $delivery_date = '';
-}
-
-if(!$_POST['direccion']){
-    $direccion = '';
-}
-
-$sql = "INSERT INTO pedidos (client_name, client_phone, client_email, payment_method, delivery_type, delivery_date, product_list, status, address, total_pay) 
+if ($_POST['delivery_type'] == 'domicilio') {
+    $delivery_date = $_POST['delivery_date'];
+    $direccion = $_POST['direccion'];
+    $sql = "INSERT INTO pedidos (client_name, client_phone, client_email, payment_method, delivery_type, delivery_date, product_list, status, address, total_pay) 
 VALUES ('$nombre_cliente','$tel_cliente','$email_cliente','$metodo_pago','$delivery_type','$delivery_date','$lista_productos',1,'$direccion','$total_pagar')";
+}else{
+    $sql = "INSERT INTO pedidos (client_name, client_phone, client_email, payment_method, delivery_type, product_list, status, total_pay) 
+VALUES ('$nombre_cliente','$tel_cliente','$email_cliente','$metodo_pago','$delivery_type','$lista_productos',1,'$total_pagar')";
+
+}
 
 $result = $conn->query($sql);
 
-if(!$result){
-    echo 'Error de conexión '.$conn->error;
+if (!$result) {
+    echo 'Error de conexión ' . $conn->error;
 }

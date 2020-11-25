@@ -71,7 +71,7 @@ if (!$_SESSION['session_id']) {
                         <div class="input-prepend">
                             <span class="input-group-text">Mínimo por Unidad</span>
                         </div>
-                        <input class="form-control" type="text" name="unidadProducto" id="unidadProducto" placeholder="Ej. 250g ó 1Kg">
+                        <input class="form-control" type="number" name="unidadProducto" id="unidadProducto" placeholder="Ej. 250g ó 1Kg">
                     </div>
                     <input type="submit" value="Agregar" class="btn btn-primary">
                 </form>
