@@ -15,7 +15,7 @@
     ?>
 
     <div class="container">
-        <h3>Buscar Productos</h3>
+        <!-- <h3>Buscar Productos</h3>
         <h5>Filtrar búqueda</h5>
         <form action="">
             <div class="input-group">
@@ -33,7 +33,7 @@
                     </select>
                 </div>
             </div>
-        </form>
+        </form> -->
 
         <!-- Modal -->
         <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">

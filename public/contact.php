@@ -38,7 +38,7 @@
                                 <label for="desc">Descripción</label>
                                 <textarea class="form-control" name="desc" id="desc" cols="30" rows="10" placeholder="Describa su mensaje"></textarea>
                             </div>
-                            <input class="btn" type="button" value="Enviar" />
+                            <input class="btn btn-primary" type="button" value="Enviar" />
                         </form>
                     </div>
                     <div class="col-6 text-center">
